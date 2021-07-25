@@ -57,15 +57,15 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+EXTENSIONS = {
+    'scrapytutorial.extensions.NotificationExtension': 100,
+}
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'scrapytutorial.pipelines.TextPipeline': 300,
-    'scrapytutorial.pipelines.MongoDBPipeline': 400,
+    # 'scrapytutorial.pipelines.MongoDBPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
